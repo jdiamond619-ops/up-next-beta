@@ -1,0 +1,9 @@
+{
+  "name": "virality-indexed-market-beta",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Beta prototype for a virality-indexed content market model",
+  "scripts": {
+    "start": "node src/server.js"
+  }
+}
