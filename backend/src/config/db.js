@@ -7,7 +7,8 @@ if (!env.databaseUrl) {
 
 const pool = new Pool({
   connectionString: env.databaseUrl,
-  ssl: env.isProduction ? { rejectUnauthorized: false } : false,
+  // Render Postgres requires TLS even internally
+  ssl: { rejectUnauthorized: false },
 });
 
 module.exports = pool;
