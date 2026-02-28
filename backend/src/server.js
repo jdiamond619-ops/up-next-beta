@@ -11,7 +11,7 @@ const leaderboardRoutes = require("./routes/leaderboardRoutes");
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: env.clientOrigin }));
+app.use(cors({ origin: env.clientOrigin, credentials: true }));
 app.use(express.json());
 
 app.get("/health", (_req, res) => {
