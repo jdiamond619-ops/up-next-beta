@@ -6,7 +6,8 @@ if (!env.databaseUrl) {
 }
 
 const pool = new Pool({
-  connectionString: env.databaseUrl
+  connectionString: env.databaseUrl,
+  ssl: env.isProduction ? { rejectUnauthorized: false } : false,
 });
 
 module.exports = pool;
